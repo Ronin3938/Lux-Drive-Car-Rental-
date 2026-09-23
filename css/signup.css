@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Left Panel */
+.left-panel {
+    flex: 0 0 40%;
+    background: linear-gradient(135deg, #0f8989ff, #181818ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 30px;
+    color: #fff;
+}
+
+.form-box {
+    background: linear-gradient(135deg, #151c15ff, #0f8989ff);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(2, 100, 23, 0.4);
+    width: 100%;
+    max-width: 550px;
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #e0f2f1;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(40, 38, 38, 1);
+    color: #fff;
+    font-size: 16px;
+}
+
+.input-group input::placeholder {
+    color: #c8e6c9;
+}
+
+/* Updated Button Styles */
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    background: #19864cff;
+}
+
+.btn-primary {
+    background: #19864cff;
+}
+
+.btn-primary:hover {
+    background: #11683dff; /* Darker green on hover */
+}
+
+.btn-primary:active {
+    transform: translateY(2px); /* Push-down effect */
+}
+
+.btn-secondary {
+    background: #757575; /* Gray for "Skip" or "Choose Location" */
+}
+
+.btn-secondary:hover {
+    background: #5a5a5a;
+}
+
+.btn-secondary:active {
+    transform: translateY(2px);
+}
+
+.form-footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #c8e6c9;
+}
+
+.form-footer a {
+    color: #a5d6a7;
+    text-decoration: none;
+}
+
+.msg {
+    text-align: center;
+    margin-top: 10px;
+    color: #ff8a80;
+}
+
+/* Right Panel */
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #062825ff, #236257ff);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Form Wrapper */
+#signupForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #151c15ff, #0f8989ff);
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(2, 100, 23, 0.4);
+}
+
+/* Step Headers */
+#signupForm h2 {
+    font-size: 26px;
+    color: #e0f2f1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input Fields */
+#signupForm input,
+#signupForm select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(40, 38, 38, 1);
+    color: #fff;
+    font-size: 16px;
+}
+
+#signupForm input::placeholder,
+#signupForm select option {
+    color: #c8e6c9;
+}
+
+/* Buttons */
+#signupForm button {
+    width: 48%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: 0.3s;
+    margin-right: 4%;
+}
+
+#signupForm button:hover {
+    background: #19864c;
+}
+
+#signupForm button:last-child {
+    margin-right: 0;
+}
+
+/* Hide steps by default */
+.step {
+    display: none;
+}
+
+/* Show step on active */
+.step.active {
+    display: block;
+}
+
+/* File Input & Image Preview */
+#signupForm #profile_picture {
+    width: 100%;
+    padding: 14px;
+    background: rgba(40, 38, 38, 1);
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+#signupForm #preview {
+    max-width: 150px;
+    margin-top: 10px;
+}
+
+/* Location Button */
+#signupForm #map {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    background: #eeeeee;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#signupForm button[type="button"]:nth-of-type(2) {
+    background: #757575;
+}
+
+/* Checkbox (Show Password) */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#signupForm input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto;
+    margin-top: 10px;
+}
+
+/* Floating Shapes */
+
+/* Step Progression Button Positioning */
+#signupForm button[type="button"] {
+    width: 48%;
+}
+
+#signupForm button[type="button"]:hover {
+    background: #303030;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #signupForm {
+        padding: 25px;
+    }
+
+    #signupForm button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    #signupForm input,
+    #signupForm select {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+
+/* Branding */
+.brand {
+    font-size: 54px;
+    font-weight: 900;
+    background: linear-gradient(90deg, #a7ffeb, #1de9b6, #00acc1);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+    font-size: 20px;
+    font-style: italic;
+    color: #e0f2f1;
+    margin-bottom: 40px;
+}
+
+/* Welcome box */
+.highlight-box {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.highlight-box h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #b2dfdb;
+}
+
+.highlight-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #c8e6c9;
+}
+
+/* Floating Shapes */
+.right-panel::before,
+.right-panel::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+}
+
+.right-panel::before {
+    width: 250px;
+    height: 250px;
+    background: #ffffff;
+    top: -60px;
+    right: -60px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.right-panel::after {
+    width: 180px;
+    height: 180px;
+    background: #ffffff;
+    bottom: -50px;
+    left: -50px;
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(50px);
+    }
+}
+
+/* Modal (Choose Location) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+/* Close Button */
+.modal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* New style for the temporary floating message */
+.floating-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ff5252;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    font-weight: bold;
+    text-align: center;
+    animation: fadeinout 2s forwards;
+}
+
+@keyframes fadeinout {
+    0% { opacity: 0; transform: translate(-50%, -60%); }
+    20% { opacity: 1; transform: translate(-50%, -50%); }
+    80% { opacity: 1; transform: translate(-50%, -50%); }
+    100% { opacity: 0; transform: translate(-50%, -60%); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    body {
+        flex-direction: column;
+    }
+
+    .left-panel,
+    .right-panel {
+        flex: 0 0 auto;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .left-panel {
+        padding: 40px 20px;
+    }
+
+    .right-panel {
+        padding: 40px 20px;
+    }
+}

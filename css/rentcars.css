@@ -1,0 +1,319 @@
+/* Container */
+.luxury-container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.luxury-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+/* Category Buttons */
+.category-buttons {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cat-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 12px;
+    background-color: #eee;
+    color: #333;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.cat-btn.active,
+.cat-btn:hover {
+    background: linear-gradient(135deg, #6c63ff, #3498db);
+    color: #fff;
+}
+
+/* Grid - 4 columns fixed, rows auto-expand */
+.luxury-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Card */
+.luxury-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s, box-shadow 0.4s;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.luxury-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Collage Layout */
+.car-image-collage {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.car-image-collage .main-image {
+    flex: 2;
+    overflow: hidden;
+}
+
+.car-image-collage .main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.car-image-collage .side-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.car-image-collage .side-images img {
+    flex: 1;
+    width: 100%;
+    object-fit: cover;
+    border-left: 2px solid #fff;
+    border-top: 2px solid #fff;
+}
+
+/* Card Content */
+.luxury-card-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.luxury-card h3 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.luxury-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Status badges */
+.luxury-card .status {
+    font-weight: 600;
+    text-transform: capitalize;
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.luxury-card .available {
+    background: #d4f4dd;
+    color: #1b7f3a;
+}
+
+.luxury-card .booked {
+    background: #ffe1e1;
+    color: #b00020;
+}
+
+.luxury-card .maintenance {
+    background: #fff4d6;
+    color: #b36b00;
+}
+
+        /* CSS for the wishlist button and pop-up */
+        .wishlist-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(69, 57, 57, 0.7);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+            color: #ccc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .wishlist-btn:hover {
+            background: rgba(68, 60, 60, 0.9);
+            color: #e70808;
+        }
+
+        .wishlist-btn.wished {
+            color: #e70808;
+        }
+
+        .wishlist-btn.wished:hover {
+            color: #e70808;
+        }
+
+        .car-image-collage {
+            position: relative;
+            /* Make sure this is relative for absolute positioning of the button */
+        }
+
+        .popup-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: none;
+            /* Hidden by default */
+            opacity: 0;
+            transition: opacity 0.5s, transform 0.5s;
+            transform: translateY(-20px);
+        }
+
+        .popup-message.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* New styles for filters and search */
+        .filter-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #searchInput {
+            padding: 0.75rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 0.5rem;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .price-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .price-filters button,
+        .brand-filter select {
+            padding: 0.75rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .price-filters button.active,
+        .brand-filter select.active {
+            background-color: #333;
+            color: white;
+            border-color: #333;
+        }
+/* Rent Button */
+.rent-btn {
+    background: linear-gradient(135deg, #6c63ff, #3498db);
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.rent-btn:hover:not(:disabled) {
+    box-shadow: 0 8px 20px rgba(108, 99, 255, 0.5);
+    transform: translateY(-3px);
+}
+
+.rent-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Optional overlay effect on hover */
+.luxury-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.15), rgba(0,0,0,0));
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: 1;
+}
+
+.luxury-card:hover::before {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .luxury-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .luxury-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .luxury-grid {
+        grid-template-columns: 1fr;
+    }
+}

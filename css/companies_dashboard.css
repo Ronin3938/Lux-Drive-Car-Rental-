@@ -1,0 +1,194 @@
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        :root {
+            --primary-color: #008080;
+            --secondary-color: #f0fdf4;
+            --dark-color: #333;
+            --light-color: #fff;
+            --success-color: #28a745;
+            --info-color: #17a2b8;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--secondary-color);
+            margin: 0;
+            padding: 0;
+            color: var(--dark-color);
+        }
+
+        .dashboard-container {
+            width: 95%;
+            max-width: 1400px;
+            margin: 20px auto;
+            background-color: var(--light-color);
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .header .logout-btn {
+            padding: 10px 20px;
+            background-color: var(--danger-color);
+            color: var(--light-color);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .header .logout-btn:hover {
+            background-color: #c82333;
+            transform: translateY(-2px);
+        }
+
+        .tab-bar {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .tab-bar a {
+            padding: 12px 25px;
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: bold;
+            border-bottom: 4px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .tab-bar a.active {
+            border-bottom: 4px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        h2 {
+            font-size: 2em;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: var(--dark-color);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table thead {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            text-align: left;
+        }
+
+        table th,
+        table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #f8f8f8;
+        }
+
+        table tbody tr:hover {
+            background-color: #e6f7f5;
+        }
+
+        .no-content {
+            text-align: center;
+            color: #888;
+            font-size: 1.2em;
+            padding: 50px;
+        }
+
+        .status-dropdown {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 15px;
+            color: var(--light-color);
+            font-size: 0.8em;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        .status-badge.pending {
+            background-color: var(--warning-color);
+        }
+
+        .status-badge.confirmed {
+            background-color: var(--success-color);
+        }
+
+        .status-badge.cancelled {
+            background-color: var(--danger-color);
+        }
+
+        .status-badge.completed {
+            background-color: var(--info-color);
+        }
+
+        .status-badge.paid {
+            background-color: var(--success-color);
+        }
+
+        .status-badge.fail {
+            background-color: var(--danger-color);
+        }
+
+        .message-box {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .message-box.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .message-box.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }

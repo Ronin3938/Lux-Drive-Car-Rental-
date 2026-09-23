@@ -1,0 +1,569 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #e0f7fa;
+  /* Light turquoise background for travel vibe */
+}
+/* Discount Banner */
+.discount1 {
+    background-color: #00897b;
+    color: #fff;
+    font-weight: bold;
+    height: 30px;
+    padding-bottom: 10px;
+    margin-top: -20px;
+}
+
+/* Header */
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+}
+
+.logo-area1 {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.logo-area1 img {
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: #00bfa5;
+}
+.logo-area1 img :hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.logo-area1 h1 {
+    font-size: 28px;
+    color: #00796b;
+    margin-left: 10px;
+}
+.logo-area1 h1:hover {
+    color: #c9dcd8;
+}
+
+/* Search Box */
+.search-box1 {
+    width: 50%;
+    margin: 30px auto 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 150, 136, 0.15);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.search-box1 input {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: #00796b;
+}
+
+.search-box1 input::placeholder {
+    color: #004d40;
+}
+
+.search-box1 button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background-color: #00796b;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-box1 button:hover {
+    background-color: #004d40;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background: #00897b;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.login-btn:hover {
+    background: #059e33;
+}
+.Signup-btn {
+    padding: 10px 20px;
+    background: #00897b;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.Signup-btn:hover {
+        background: #059e33;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.auth-buttons a {
+    padding: 10px 20px;
+    background: #00897b;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.auth-buttons a:hover {
+    background: #004d40;
+}
+
+/* New style for the admin button */
+.admin-btn-container1 {
+    position: relative;
+    margin-right: 15px;
+}
+.admin-btn {
+    background-color: #f44336; /* A red color to make it stand out */
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.admin-btn:hover {
+    background-color: #d32f2f;
+}
+
+.profile-icon {
+    font-size: 40px;
+    color: #00796b;
+    transition: color 0.3s ease;
+}
+.user-profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00796b;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #004d40;
+    white-space: nowrap; 
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Navigation Bar */
+nav {
+    background: #00695c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+}
+
+nav li {
+    position: relative;
+    padding: 15px 15px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li:hover {
+    background: #004d40;
+    z-index: 100;
+}
+
+nav li ul {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #036247dd;
+    display: none;
+    min-width: 180px;
+    z-index: 1;
+    border-radius: 0 0 8px 8px;
+}
+
+nav li:hover ul {
+    display: block;
+}
+
+nav li ul li {
+    padding: 12px 20px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+nav li ul li:hover {
+    background: #22adaaff;
+    transform: scale(1.1);
+    z-index: 10;
+    border-radius: 8px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right a,
+.nav-right button {
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.nav-right a:hover,
+.nav-right button:hover {
+    background: #004d40;
+}
+
+.nav-icon {
+    font-size: 20px;
+    color: white;
+}
+
+/* Box Container */
+/* .box-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px auto;
+    gap: 25px;
+    max-width: 1200px;
+}
+
+.box1 {
+    background: #b2dfdb;
+    padding: 30px;
+    width: 250px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, background 0.3s;
+    color: #004d40;
+    font-weight: 600;
+}
+
+.box1:hover {
+    transform: translateY(-10px);
+    background: #00796b;
+    color: white;
+} */
+
+/* Auth Area */
+.auth-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth-area .btn {
+    padding: 6px 12px;
+    background: #00796b;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.auth-area .btn:hover {
+    background: #005f4f;
+}
+
+/* Profile Icon */
+.profile-icon {
+    font-size: 40px;
+    color: #00796b;
+    cursor: pointer;
+}
+
+/* New CSS for dynamic dropdowns */
+.dropdown-item-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.circle-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00bfa5;
+}
+
+nav li ul li {
+    padding: 0;
+}
+
+.places-dropdown-container {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 20px;
+}
+
+.places-dropdown-container .dropdown-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.places-dropdown-container h2 {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #b2dfdb;
+    margin-bottom: 5px;
+    padding-left: 20px;
+}
+
+.places-dropdown-container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 150px;
+    background: none;
+    position: static;
+}
+
+.places-dropdown-container ul li a {
+    padding: 8px 20px;
+}
+
+.places-dropdown-parent > .places-dropdown-container {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #004d40;
+    display: none;
+    z-index: 1;
+    border-radius: 0 0 8px 8px;
+}
+
+.places-dropdown-parent:hover > .places-dropdown-container {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .places-dropdown-container {
+        flex-direction: column;
+    }
+}
+/* ---------------- Responsive Styles ---------------- */
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+    .header1 {
+        padding: 10px 20px;
+    }
+
+    .logo-area1 img {
+        height: 70px;
+    }
+
+    .logo-area1 h1 {
+        font-size: 22px;
+    }
+
+    .search-box1 {
+        width: 70%;
+        padding: 15px;
+    }
+
+    nav {
+        padding: 0 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Header: stack logo & buttons */
+    .header1 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px 15px;
+    }
+
+    .logo-area1 img {
+        height: 60px;
+    }
+
+    .logo-area1 h1 {
+        font-size: 20px;
+    }
+
+    /* Search Box */
+    .search-box1 {
+        width: 90%;
+        margin: 15px auto;
+        flex-direction: column;
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .search-box1 input {
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    .search-box1 button {
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    /* Navigation: stacked into hamburger style */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: left;
+        padding: 12px 10px;
+    }
+
+    nav li ul {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    /* Right side buttons stack */
+    .nav-right {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    /* Profile & Auth */
+    .user-profile-container {
+        gap: 5px;
+    }
+
+    .profile-pic {
+        width: 35px;
+        height: 35px;
+    }
+
+    .user-name {
+        max-width: 90px;
+        font-size: 14px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .logo-area1 img {
+        height: 45px;
+    }
+
+    .logo-area1 h1 {
+        font-size: 18px;
+    }
+
+    .search-box1 {
+        padding: 10px;
+    }
+
+    .search-box1 input,
+    .search-box1 button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    nav li {
+        font-size: 14px;
+    }
+
+    .auth-buttons a,
+    .login-btn,
+    .Signup-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
